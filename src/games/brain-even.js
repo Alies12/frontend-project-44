@@ -1,9 +1,16 @@
 #!/usr/bin/env node
-import {evenResult} from '@hexlet/pairs';
-let randomNumber = (Math.random() * 100).toFixed(0);
-export default () => {
-    let correctAns = "";
-    randomNumber % 2 === 0 ? correctAns = "yes" : correctAns = "no";
-    return evenResult(randomNumber, correctAns)
+import { cons } from '@hexlet/pairs';
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
+export default () => {
+  const number = getRandomInt(1, 50);
+  let correctAns = '';
+  if (number % 2 === 0) {
+    correctAns = 'yes';
+  } else {
+    correctAns = 'no';
+  }
+  return cons(number, correctAns);
+};

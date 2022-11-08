@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { evenResult } from '@hexlet/pairs';
+import { cons} from '@hexlet/pairs';
 
 function prime(nums) {
   if (nums < 2) {
@@ -29,5 +29,5 @@ export default () => {
     correctAns = 'no';
   }
 
-  return evenResult(number, correctAns);
+  return cons(number, correctAns);
 };

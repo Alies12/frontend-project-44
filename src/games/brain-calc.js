@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import {evenResult} from '@hexlet/pairs';
+import {cons} from '@hexlet/pairs';
 export default () => {
     let correctAnswer = 0;
     const firstNumber = (Math.random() * 100).toFixed(0);
@@ -15,5 +15,5 @@ export default () => {
         default:
             correctAnswer = firstNumber * secondNumber
       }
-      return evenResult(`${firstNumber} ${signs} ${secondNumber}`, correctAnswer.toString());
+      return cons(`${firstNumber} ${signs} ${secondNumber}`, correctAnswer.toString());
 }

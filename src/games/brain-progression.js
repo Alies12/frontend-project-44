@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { evenResult} from '@hexlet/pairs';
+import {cons} from '@hexlet/pairs';
 
 export default () => {
   const firstNumber = Math.round(Math.random() * 10);
@@ -13,5 +13,5 @@ export default () => {
   const correctAnswer = array[hideSymbol];
   array[hideSymbol] = '..';
 
-  return evenResult(array.join(' '), correctAnswer.toString());
+  return cons(array.join(' '), correctAnswer.toString());
 };
