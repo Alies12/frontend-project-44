@@ -3,18 +3,17 @@ import { cons } from '@hexlet/pairs';
 
 export default () => {
   let correctAnswer = 0;
-  const firstNumber = (Math.random() * 100).toFixed(0);
-  const secondNumber = (Math.random() * 100).toFixed(0);
-  const signs = Math.round(Math.random() * 2);
-  switch (signs) {
-    case 0:
-      correctAnswer = firstNumber + secondNumber;
-      break;
-    case 1:
-      correctAnswer = firstNumber - secondNumber;
-      break;
-    default:
-      correctAnswer = firstNumber * secondNumber;
+  const signs = ['+', '-', '*'];
+  const firstNum = Math.round(Math.random() * 10);
+  const secondNum = Math.round(Math.random() * 10);
+  const sign = Math.round(Math.random() * 2);
+  if (signs[sign] === '+') {
+    correctAnswer = (firstNum + secondNum);
+  } else if (signs[sign] === '-') {
+    correctAnswer = (firstNum - secondNum);
+  } else {
+    correctAnswer = (firstNum * secondNum);
   }
-  return cons(`${firstNumber} ${signs} ${secondNumber}`, correctAnswer.toString());
+
+  return cons(`${firstNum} ${signs[sign]} ${secondNum}`, correctAnswer.toString());
 };
