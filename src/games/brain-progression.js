@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import {cons} from '@hexlet/pairs';
+import { cons } from '@hexlet/pairs';
 
 export default () => {
   const firstNumber = Math.round(Math.random() * 10);
