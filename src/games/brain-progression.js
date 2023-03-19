@@ -1,17 +1,19 @@
 #!/usr/bin/env node
+/* eslint-disable import/prefer-default-export */
 import { cons } from '@hexlet/pairs';
+import { randomNumbers } from '../../random.js';
 
-export default () => {
-  const firstNumber = Math.round(Math.random() * 10);
-  const add = Math.round(Math.random() * 10);
-  const array = [];
+export function progress() {
+  const firstNumber = randomNumbers(0, 10);
+  const add = randomNumbers(0, 10);
+  const progression = [];
   for (let i = 0; i < 10; i += 1) {
-    array.push(firstNumber + add * i);
+    progression.push(firstNumber + add * i);
   }
 
-  const hideSymbol = Math.round(Math.random() * (array.length - 1));
-  const correctAnswer = array[hideSymbol];
-  array[hideSymbol] = '..';
+  const hideSymbol = Math.round(Math.random() * (progression.length - 1));
+  const correctAnswer = progression[hideSymbol];
+  progression[hideSymbol] = '..';
 
-  return cons(array.join(' '), correctAnswer.toString());
-};
+  return cons(progression.join(' '), correctAnswer.toString());
+}

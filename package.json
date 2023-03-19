@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Alies12/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Alies12/frontend-project-44/actions)",
+  "description": "singaevskiy2001@mail.ru, Andrey",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
@@ -26,11 +26,11 @@
   "homepage": "https://github.com/Alies12/frontend-project-44#readme",
   "dependencies": {
     "@hexlet/pairs": "^1.1.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint": "^8.27.0",
     "eslint-plugin-jest": "^27.1.4",
     "eslint-plugin-react": "^7.31.10",

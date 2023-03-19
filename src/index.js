@@ -1,8 +1,9 @@
 #!/usr/bin/env node
+/* eslint-disable import/prefer-default-export */
 import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 
-export default (textQuestion, getQuestion) => {
+export function startGame(textQuestion, getQuestion) {
   console.log('Welcome to the Brain Games!');
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}!`);
@@ -29,4 +30,4 @@ export default (textQuestion, getQuestion) => {
   }
 
   console.log(`Congratulations, ${username}!`);
-};
+}

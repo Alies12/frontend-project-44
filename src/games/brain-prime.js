@@ -1,5 +1,7 @@
 #!/usr/bin/env node
+/* eslint-disable import/prefer-default-export */
 import { cons } from '@hexlet/pairs';
+import { randomNumbers } from '../../random.js';
 
 function prime(nums) {
   if (nums < 2) {
@@ -20,8 +22,8 @@ function prime(nums) {
   return true;
 }
 
-export default () => {
-  const number = Math.round(Math.random() * 100);
+export function primeNumbers() {
+  const number = randomNumbers(0, 100);
   let correctAns = '';
   if (prime(number)) {
     correctAns = 'yes';
@@ -30,4 +32,4 @@ export default () => {
   }
 
   return cons(number, correctAns);
-};
+}

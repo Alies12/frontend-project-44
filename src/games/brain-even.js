@@ -1,11 +1,10 @@
 #!/usr/bin/env node
+/* eslint-disable import/prefer-default-export */
 import { cons } from '@hexlet/pairs';
+import { randomNumbers } from '../../random.js';
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-export default () => {
-  const number = getRandomInt(1, 50);
+export function parityCheck() {
+  const number = randomNumbers(1, 50);
   let correctAns = '';
   if (number % 2 === 0) {
     correctAns = 'yes';
@@ -13,4 +12,4 @@ export default () => {
     correctAns = 'no';
   }
   return cons(number, correctAns);
-};
+}
