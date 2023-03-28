@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable import/prefer-default-export */
 import { cons } from '@hexlet/pairs';
-import { randomNumbers } from '../../random.js';
+import { randomNumbers } from '../utilites/random.js';
 
 export function calculator() {
   let correctAnswer = 0;

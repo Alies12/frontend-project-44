@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable import/prefer-default-export */
 import { cons } from '@hexlet/pairs';
-import { randomNumbers } from '../../random.js';
+import { randomNumbers } from '../utilites/random.js';
 
 function gcd(a, b) {
   if (!b) {
