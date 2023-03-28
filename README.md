@@ -2,7 +2,9 @@
 ---
 Установка:
 git clone https://github.com/Alies12/frontend-project-44
+
 cd frontend-project-44
+
 make install
 ---
 Запуск:
